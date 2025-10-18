@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Monedas</title>
+
+  <!-- Bootstrap 4 -->
+  <link 
+    rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  >
+
+  <!-- Iconos -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  >
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient">
+
+  <!-- Título general -->
+  <header class="text-center text-white py-5 mb-4">
+    <h1 class="display-4 font-weight-bold">
+      <i class="fas fa-money-bill-wave"></i> Conversor Global de Monedas
+    </h1>
+    <p class="lead">Convierte fácilmente entre las principales divisas del mundo</p>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main class="d-flex justify-content-center align-items-center">
+    <div class="converter card shadow-lg p-5">
+      <h2 class="text-center mb-4 text-primary">
+        <i class="fas fa-coins"></i> Calculadora de Conversión
+      </h2>
+
+      <div class="form-group">
+        <label for="amount" class="font-weight-bold">Cantidad:</label>
+        <input 
+          type="number" 
+          id="amount" 
+          class="form-control form-control-lg" 
+          placeholder="Ingrese el monto"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="from" class="font-weight-bold">Desde:</label>
+        <select id="from" class="form-control form-control-lg custom-select">
+          <option value="USD">USD - Dólar estadounidense</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="COP">COP - Peso colombiano</option>
+          <option value="MXN">MXN - Peso mexicano</option>
+          <option value="JPY">JPY - Yen japonés</option>
+          <option value="GBP">GBP - Libra esterlina</option>
+          <option value="BRL">BRL - Real brasileño</option>
+          <option value="AUD">AUD - Dólar australiano</option>
+          <option value="CAD">CAD - Dólar canadiense</option>
+          <option value="CHF">CHF - Franco suizo</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="to" class="font-weight-bold">Hacia:</label>
+        <select id="to" class="form-control form-control-lg custom-select">
+          <option value="USD">USD - Dólar estadounidense</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="COP">COP - Peso colombiano</option>
+          <option value="MXN">MXN - Peso mexicano</option>
+          <option value="JPY">JPY - Yen japonés</option>
+          <option value="GBP">GBP - Libra esterlina</option>
+          <option value="BRL">BRL - Real brasileño</option>
+          <option value="AUD">AUD - Dólar australiano</option>
+          <option value="CAD">CAD - Dólar canadiense</option>
+          <option value="CHF">CHF - Franco suizo</option>
+        </select>
+      </div>
+
+      <button 
+        class="btn btn-primary btn-lg btn-block mt-3" 
+        onclick="convertir()">
+        <i class="fas fa-exchange-alt"></i> Convertir
+      </button>
+
+      <div class="result text-center mt-4" id="result"></div>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Archivo JS -->
+  <script src="index.js"></script>
+</body>
+</html>
